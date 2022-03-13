@@ -46,4 +46,18 @@ def show_candidate_id(id):
     return f"<pre>{candidates_string}<pre>"
 
 
-#Вывод
+# Вывод сотрудников по скилам
+def show_profiles_with_skills(skill):
+    candidates_list = load_candidates()
+    candidates_string = ""
+    for candidate in candidates_list:
+        if skill in candidate['skills']:
+            candidates_str = f"name: {candidate['name']}\n" \
+                             f"position: {candidate['position']}\n" \
+                             f"gender: {candidate['gender']}\n" \
+                             f"age: {candidate['age']}\n" \
+                             f"skills: {candidate['skills']}\n\n"
+
+            candidates_string += candidates_str
+
+    return f"<pre>{candidates_string}<pre>"

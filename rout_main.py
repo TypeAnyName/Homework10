@@ -1,4 +1,4 @@
-from Functions import load_candidates
+from functions10 import load_candidates
 from flask import Flask
 
 if __name__ == "__main__":

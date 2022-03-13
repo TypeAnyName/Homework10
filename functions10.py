@@ -26,3 +26,24 @@ def make_candidate_list():
         candidates_string += candidates_str
 
     return f"<pre>{candidates_string}<pre>"
+
+
+# Вывод кандидата по id
+def show_candidate_id(id):
+    candidates_list = load_candidates()
+    candidates_string = ""
+    for candidate in candidates_list:
+        if candidate["id"] == id:
+            candidates_str = f"<img src= {candidate['picture']} \n" \
+                             f"<pre>\nname: {candidate['name']}\n" \
+                             f"position: {candidate['position']}\n" \
+                             f"gender: {candidate['gender']}\n" \
+                             f"age: {candidate['age']}\n" \
+                             f"skills: {candidate['skills']}\n\n<pre>"
+
+            candidates_string = candidates_str
+
+    return f"<pre>{candidates_string}<pre>"
+
+
+#Вывод

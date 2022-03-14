@@ -17,7 +17,7 @@ if __name__ == "__main__":
 
     @app.route("/skill/<x>")
     def page_profiles_by_skills(x):
-        return f"{functions10.show_profiles_with_skills(x)}"
+        return f"{functions10.show_profiles_with_skills(x.lower())}"
 
 
     app.run()

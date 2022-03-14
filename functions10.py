@@ -45,7 +45,7 @@ def show_profiles_with_skills(skill):
     candidates_list = load_candidates()
     candidates_string = ""
     for candidate in candidates_list:
-        if skill in candidate['skills']:
+        if skill in candidate['skills'].split(", "):
             candidates_str = f"name: {candidate['name']}\n" \
                              f"position: {candidate['position']}\n" \
                              f"skills: {candidate['skills']}\n\n"
